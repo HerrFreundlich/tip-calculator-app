@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tip calculator app</title>
+  <!--Favicon-->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!--Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <!--CSS Style Sheet-->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <h1>S P L I<br>T T E R</h1>
+
+  <div class="calc-card">
+
+    <div class="calc-input-card">
+
+      <div class="bill">
+        <h4>Bill</h4>
+        <h4 class="error-msg"></h4>
+        <input type="number" placeholder="0" onkeypress="return isNumberKey(event)">
+      </div>
+
+      <div class="select-tip">
+        <h4>Select Tip %</h4>
+        <h4 class="error-msg"></h4>
+        <div class="select-tip-buttons">
+          <button class="tip-percent" name="5">5%</button>
+          <button class="tip-percent" name="10">10%</button>
+          <button class="tip-percent" name="15">15%</button>
+          <button class="tip-percent" name="25">25%</button>
+          <button class="tip-percent" name="50">50%</button>
+          <input type="number" placeholder="CUSTOM" onkeypress="return isNumberKey(event)" class="custom tip-percent">
+        </div>
+      </div>
+
+      <div class="select-people">
+        <h4>Number of People</h4>
+        <h4 class="error-msg"></h4>
+        <input type="number" min="0" placeholder="0" onkeypress="return isNumberKey(event)">
+      </div>
+
+    </div>
+
+    <div class="calc-output-card">
+      <p>Tip Amount<br><span>/ person</span></p>
+      <output class="tip-output">$0.00</output>
+      <p>Total<br><span>/ person</span></p>
+      <output class="total-output">$0.00</output>
+
+      <button onclick="resetButton()">RESET</button>
+    </div>
+
+  </div>
+
+  <script src="javascript/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,291 @@
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+    margin: 0;
+
+    background-color: hsl(185, 41%, 84%);
+
+    font-family: 'Space Mono', monospace;
+}
+
+h1 {
+    margin-top: 8%;
+    margin-bottom: 5%;
+
+    color: hsl(183, 100%, 15%);
+
+    font-size: 20px;
+}
+
+/*-----Style Calculator Card-----*/
+
+.calc-card {
+    display: flex;
+
+    width: auto;
+    height: auto;
+    padding: 35px;
+
+    border-radius: 20px;
+
+    background-color: white;
+}
+
+/*-----Style Calculator Input Card-----*/
+
+.calc-input-card {
+    padding: 0 50px 0 0;
+}
+
+.bill {
+    display: grid;
+    grid-template-columns: 145px 145px;
+    grid-template-rows: 1fr 1fr;
+}
+
+.bill h4 {
+    color: hsl(186, 14%, 43%);
+    font-size: 13px;
+    font-weight: 700;
+
+    margin: 0;
+}
+
+.bill .error-msg {
+    color: red;
+    text-align: right;
+}
+
+.select-tip {
+    display: grid;
+    grid-template-columns: 145px 145px;
+    grid-template-rows: 60px 1fr;
+}
+
+.select-tip .error-msg {
+    color: red;
+    text-align: right;
+}
+
+.select-tip h4 {
+    color: hsl(186, 14%, 43%);
+    font-size: 13px;
+    font-weight: 700;
+
+    margin: 30px 0 10px 0;
+}
+
+.select-tip-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.select-tip-buttons button {
+    width: 90px;
+    height: 35px;
+
+    font-family: 'Space Mono', monospace;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+
+    background-color: hsl(183, 100%, 15%);
+
+    border-radius: 5px;
+    border: none;
+}
+
+.select-tip-buttons .custom {
+    width: 90px;
+    height: 35px;
+
+    background-color: hsl(189, 41%, 97%);
+
+    border-radius: 5px;
+    border: none;
+
+    font-family: 'Space Mono', monospace;
+    font-size: 16px;
+    font-weight: 700;
+    color: hsl(183, 100%, 15%);
+    text-align: center;
+}
+
+.select-people {
+    display: grid;
+    grid-template-columns: 145px 145px;
+    grid-template-rows: 1fr 1fr;
+}
+
+.select-people .error-msg {
+    color: red;
+    text-align: right;
+}
+
+.select-people h4 {
+    color: hsl(186, 14%, 43%);
+    font-size: 13px;
+    font-weight: 700;
+
+    margin: 30px 0 10px 0;
+}
+
+.select-people input, .bill input {
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    width: 95%;
+    height: 30px;
+    padding: 0 5% 0 0;
+
+    border: none;
+    border-radius: 2px;
+
+    background-image: url("../images/icon-person.svg");
+    background-repeat: no-repeat;
+    background-position: 5% 50%;
+    background-size: 9.5px;
+    background-color: hsl(189, 41%, 97%);
+
+    font-family: 'Space Mono', monospace;
+    font-weight; 700;
+    font-size: 20px;
+    color: hsl(183, 100%, 15%);
+    text-align: right;
+}
+
+.bill input {
+    background-image: url("../images/icon-dollar.svg");
+}
+
+/*-----Style Calculator Output Card-----*/
+
+.calc-output-card {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+
+    min-width: 250px;
+    padding: 30px;
+
+    background-color: hsl(183, 100%, 15%);
+
+    border-radius: 10px;
+}
+
+.calc-output-card p {
+    margin: 0;
+
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.calc-output-card span {
+    font-size: 10px;
+    font-weight: 400;
+    color: hsl(184, 14%, 56%);
+}
+
+.calc-output-card output {
+    margin: 0 0 0 20px;
+
+    font-size: 30px;
+    font-weight: 700;
+    color: hsl(172, 67%, 45%);
+    text-align: right;
+}
+
+.calc-output-card button {
+    grid-column: 1 / 3;
+    grid-row: 4;
+
+    height: 35px;
+
+    background-color: hsl(172, 67%, 45%);
+    opacity: 0.5;
+
+    border: none;
+    border-radius: 4px;
+
+    color: hsl(183, 100%, 15%);
+    font-weight: 700;
+    font-size: 14px;
+}
+
+/*-----Style Active States-----*/
+input:focus {
+    outline: 2px solid hsl(172, 67%, 45%);
+}
+
+input:hover {
+    cursor: pointer;
+}
+
+.calc-output-card button:hover {
+    opacity: 1;
+    background-color: hsl(185, 41%, 84%);
+
+    cursor: pointer;
+}
+
+.select-tip-buttons button:hover {
+    cursor: pointer;
+
+    background-color: hsl(185, 41%, 84%);
+
+    color: hsl(183, 100%, 15%);
+
+}
+
+#active-button {
+    background-color: hsl(172, 67%, 45%);
+
+    color: hsl(183, 100%, 15%);
+}
+
+/*-----Style Mobile Design-----*/
+@media (max-width: 800px) {
+
+    h1 {
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+
+    .calc-card {
+        flex-direction: column;
+    }
+
+    .calc-input-card {
+        padding: 0;
+    }
+}
+
+/*-----Remove Stepper Arrows from Number Input Fields-----*/
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/*-----Make Input Placeholders disappear when focused-----*/
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; } /* Firefox 18- */
+input:focus::-moz-placeholder { color:transparent; } /* Firefox 19+ */
+input:focus:-ms-input-placeholder { color:transparent; } /* oldIE ;) */
