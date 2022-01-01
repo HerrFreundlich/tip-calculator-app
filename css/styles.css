@@ -191,8 +191,6 @@ h1 {
 }
 
 .calc-output-card output {
-    margin: 0 0 0 20px;
-
     font-size: 30px;
     font-weight: 700;
     color: hsl(172, 67%, 45%);
