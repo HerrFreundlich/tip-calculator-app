@@ -257,6 +257,9 @@ input:hover {
 
     .calc-card {
         flex-direction: column;
+
+        width: 100%;
+        max-width: 310px;
     }
 
     .calc-input-card {
