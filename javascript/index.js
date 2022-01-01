@@ -77,7 +77,7 @@ function splitCalculation() {
              var tipPercent = parseFloat(document.querySelector("#active-button").name);
         }
 
-        if (!people == 0.0 || !bill == 0.0) {
+        if (people != 0 && bill != 0) {
             total = bill / people;
             tipAmount = (total * tipPercent) / 100;
 
